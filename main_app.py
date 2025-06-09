@@ -1,6 +1,7 @@
 from typing_extensions import TextIO
 
 from agents.extract.extract_agent import ExtractAgents
+from agents.normalize.normalize_agent import NormalizeAgents
 from agents.testcase.testcase_agent import TestCaseAgents
 from datalib.parser_define_xml import ParserDefineXML
 from enums import Text
@@ -26,5 +27,7 @@ if __name__ == '__main__':
         cd = CorrectData(r, ParserDefineXML("datalib//define2.xml").parser())
         dataset = Format.markdown_table([Text.Variable, Text.Domain, Text.Description],DataView.variables(cd.correct(answers)))
         print(dataset)
-        answers = TestCaseAgents().debug(r, dataset)
+        expression = NormalizeAgents().debug(r,dataset)
+        # print(expression)
+        # answers = TestCaseAgents().debug(r, dataset)
         # print(answers)
