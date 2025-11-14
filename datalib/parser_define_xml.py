@@ -1,4 +1,3 @@
-from http.cookiejar import domain_match
 from pathlib import Path
 
 from lxml import etree

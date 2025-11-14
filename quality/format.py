@@ -16,7 +16,7 @@ class Format(abc.ABC):
         return MarkDownTableFormat().formater(headers, data)
 
 
-class MarkDownTableFormat(Format, ABC):
+class MarkDownTableFormat(Format):
     def formater(self, headers, data) -> str:
-        md_table = tabulate(data, headers=[Text.Variable, Text.Domain, Text.Description], tablefmt="pipe")
+        md_table = tabulate(data, headers=headers, tablefmt="pipe")
         return md_table
