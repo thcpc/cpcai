@@ -1,0 +1,7 @@
+/* @import './base.css'; */
+@import './bootstrap/css/bootstrap.min.css';
+@import './tabler/css/tabler.min.css';
+@import './tabler/css/tabler-flags.min.css';
+@import './tabler/css/tabler-payments.min.css';
+@import './tabler/css/tabler-vendors.min.css';
+@import './tabler/css/demo.min.css';
