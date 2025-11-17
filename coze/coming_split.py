@@ -17,23 +17,23 @@ def create_url(s):
     without_accents = ''.join([c for c in normalized if not unicodedata.combining(c)])
     # 2. 转为小写
     lower_case = without_accents.lower()
-    kebab_case = lower_case.replace(' ', '-')
-    kebab_case = re.sub(r'[:！+]', '-', kebab_case)
-    kebab_case = re.sub(r"['.]", "", kebab_case)
-    return kebab_case
+    kebab_cases = lower_case.split(" ")
+    kebab_cases = [re.sub(r'[:!+.\'’]', '', kebab_case) for kebab_case in kebab_cases if kebab_case != " " and kebab_case != "-" and kebab_case != "+" ]
+    return "-".join(kebab_cases)
 
 result = []
 
 
 for i in range(len(lines)):
     if is_data_format(lines[i]):
-        game_url = create_url(lines[i-1])
+        game_url = f"https://www.igdb.com/games/{create_url(lines[i-1])}"
         result.append(dict(name=lines[i-1],date=lines[i], url=game_url))
 
 
 
 
-print(result)
+for r in result:
+    print(r)
 
 
 
