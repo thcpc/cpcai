@@ -4,8 +4,8 @@ import contextlib
 from sqlalchemy import create_engine, QueuePool
 from sqlalchemy.orm import sessionmaker
 
-from edktranslation.alchemy.enums.dialects import Dialects
-from edktranslation.alchemy.helper import database_url
+from alchemy.enums.dialects import Dialects
+from alchemy.helper import database_url
 
 
 

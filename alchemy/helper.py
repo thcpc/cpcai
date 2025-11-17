@@ -1,5 +1,5 @@
 
-from edktranslation.alchemy.enums.dialects import Dialects
+from alchemy.enums.dialects import Dialects
 
 
 def database_url(support_database: Dialects, settings: dict):
