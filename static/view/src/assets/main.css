@@ -1,0 +1,21 @@
+/* @import './base.css'; */
+@import './bootstrap/css/bootstrap.min.css';
+@import './tabler/css/tabler.min.css';
+@import './tabler/css/tabler-flags.min.css';
+@import './tabler/css/tabler-payments.min.css';
+@import './tabler/css/tabler-vendors.min.css';
+@import './tabler/css/demo.min.css';
+
+.ts-dropdown .active {
+    background-color: darkgrey;
+    color: inherit;
+}
+
+.ts-wrapper .option .title {
+    display: block;
+}
+.ts-wrapper .option .url {
+    font-size: 12px;
+    display: block;
+    color: #100f0f;
+}

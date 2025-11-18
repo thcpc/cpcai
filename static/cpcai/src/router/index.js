@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import GameView from '@/views/GameView.vue'
+import FinanceView from '@/views/FinanceView.vue'
+import ConfigView from '@/views/ConfigView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,16 +9,26 @@ const router = createRouter({
     {
       path: '/index.html',
       name: 'home',
-      component: HomeView,
+      component: FinanceView,
     },
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: GameView,
+    },
+    {
+      path: '/config',
+      name: 'config',
+      component: ConfigView,
+    },
+    {
+      path: '/game',
+      name: 'Game',
+      component: GameView,
     },
     {
       path: '/:pathMatch(.*)*', // 匹配所有未知路径
-      component: HomeView // 默认加载的 404 页面
+      component: GameView // 默认加载的 404 页面
     }
   ],
 })

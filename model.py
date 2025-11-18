@@ -5,6 +5,7 @@ from alchemy.base_model import BaseModel
 class Coze(BaseModel):
     __tablename__ = "coze"
     id = Column(Integer, primary_key=True)
+    name = Column(String(100))
     key = Column(String(100))
 
 class WorkFlow(BaseModel):

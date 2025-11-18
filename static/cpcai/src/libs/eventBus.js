@@ -2,13 +2,17 @@
 
 import { reactive, readonly } from 'vue';
 
-export const ViewLanEvent = "lanViewEvent"
-export const UpdateLanEvent = "UpdateLanEvent"
-export const RefreshEvent = "refreshEvent"
-export const NewLanEvent = "newLanEvent"
-export const StartAutoRefreshEvent = "startAutoRefreshEvent"
-export const StopAutoRefreshEvent = "stopAutoRefreshEvent"
-export const OpenDeleteAlertEvent = "openDeleteAlertEvent"
+// export const ViewLanEvent = "lanViewEvent"
+// export const UpdateLanEvent = "UpdateLanEvent"
+// export const RefreshEvent = "refreshEvent"
+// export const NewLanEvent = "newLanEvent"
+// export const StartAutoRefreshEvent = "startAutoRefreshEvent"
+// export const StopAutoRefreshEvent = "stopAutoRefreshEvent"
+// export const OpenDeleteAlertEvent = "openDeleteAlertEvent"
+
+export const WorkFlowRefreshEvent = "workflowRefreshEvent"
+export const CozeRefreshEvent = "cozeRefreshEvent"
+
 
 
 

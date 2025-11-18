@@ -18,10 +18,10 @@ class File(abc.ABC):
         self._relative_path = self._generate_relative_path(*args)
 
     @classmethod
-    def RootPath(cls, env: str = "prod") -> pathlib.Path:
+    def RootPath(cls, env: str = "dev") -> pathlib.Path:
         if env == "dev":
             path = pathlib.Path.cwd()
-            while path.name != "edktranslation":
+            while path.name != "cpcai":
                 path = path.parent
             return path
         else:
@@ -32,7 +32,7 @@ class File(abc.ABC):
     def db_file(cls):
         for root, dirs, files in os.walk(cls.RootPath()):
             for file in files:
-                if file == "edktranslationls.sqlite.db":
+                if file == "cpcai.sqlite.db":
                     return str(pathlib.Path(root).joinpath(file))
         raise "No DataBase File"
 

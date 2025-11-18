@@ -1,6 +1,10 @@
 
 import webview
 
+from core.file import File
+from service.py_api import PyApi
+
+
 class MainApp:
     def __init__(self, web_view):
         self.web_view = web_view
@@ -21,5 +25,5 @@ if __name__ == '__main__':
     api.init()
     main_window = webview.create_window(title='cpcai', url=app.index(), js_api=api, width=1400, height=900)
     main_window.events.closed += on_closed
-    webview.start()
+    webview.start(debug=True)
 
